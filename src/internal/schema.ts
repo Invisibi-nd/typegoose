@@ -32,7 +32,8 @@ export function _buildSchema<U extends AnyParamConstructor<any>>(
   cl: U,
   sch?: mongoose.Schema<any>,
   opt?: mongoose.SchemaOptions,
-  isFinalSchema: boolean = true
+  isFinalSchema: boolean = true,
+  overwriteOptions?: IModelOptions
 ) {
   assertionIsClass(cl);
 
@@ -46,7 +47,8 @@ export function _buildSchema<U extends AnyParamConstructor<any>>(
   logger.debug('_buildSchema Called for %s with options:', name, opt);
 
   /** Simplify the usage */
-  const Schema = mongoose.Schema;
+  // DEV: here we support existingMongoose instance's schema
+  const Schema = overwriteOptions?.existingMongoose?.Schema ?? mongoose.Schema;
   const ropt: IModelOptions = Reflect.getMetadata(DecoratorKeys.ModelOptions, cl) ?? {};
   const schemaOptions = Object.assign({}, ropt?.schemaOptions ?? {}, opt);
 
