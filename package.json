@@ -1,6 +1,6 @@
 {
   "name": "@typegoose/typegoose",
-  "version": "8.0.0-beta.2",
+  "version": "8.0.0-beta.2-noodoe",
   "description": "Define Mongoose models using TypeScript classes",
   "main": "lib/typegoose.js",
   "types": "lib/typegoose.d.ts",
@@ -38,13 +38,13 @@
   },
   "devDependencies": {
     "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "@semantic-release/changelog": "^5.0.1",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
     "@semantic-release/github": "^7.2.0",
     "@semantic-release/npm": "^7.0.10",
     "@semantic-release/release-notes-generator": "^9.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
     "@types/jest": "^26.0.20",
     "@types/lodash": "^4.14.161",
     "@types/node": "^10.17.16",
