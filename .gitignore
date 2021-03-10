@@ -160,7 +160,6 @@ $RECYCLE.BIN/
 ## Customs for this project
 build
 .env
-lib
 
 # ts's build info
 .tsbuildinfo
